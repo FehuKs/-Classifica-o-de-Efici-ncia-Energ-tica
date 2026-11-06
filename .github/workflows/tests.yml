@@ -1,0 +1,19 @@
+name: Tests
+on: [push, pull_request]
+jobs:
+  offline:
+    runs-on: ubuntu-latest
+    env:
+      MPLBACKEND: Agg
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: requirements.lock
+      - run: python -m pip install -r requirements.lock
+      - run: python -m pip install --no-deps --no-build-isolation -e .
+      - run: python -m pip check
+      - run: python -m unittest discover -s tests -v
+      - run: python -m energy_efficiency --help
