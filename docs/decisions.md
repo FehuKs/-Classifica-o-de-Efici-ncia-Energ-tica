@@ -27,3 +27,7 @@ No onboarding, a fonte UCI retornou 403 pelo proxy; imports, instalação e kern
 Não foram adicionados LLMs, serviços pagos, API HTTP, Docker ou ferramentas de orquestração. Uma CLI e unittest atendem à automação e validação atuais sem aumentar a infraestrutura necessária. O workflow de CI foi escrito para GitHub Actions; sua execução remota precisa ser observada depois de publicar a branch.
 
 Verificações locais desta implementação: oito testes passaram; as cinco células de código do notebook executaram com CSV sintético de teste. Instalação pelo lock, instalação editável, pip check e git diff --check passaram. A chamada real à UCI falhou com erro de acesso; métricas históricas não foram reproduzidas.
+
+## Validação posterior com os dados originais
+
+Após o envio de ENB2012_data.xlsx pelo autor, CLI e notebook foram executados com sucesso usando sua conversão para CSV. As predições dos três modelos foram comparadas diretamente às do código original e são idênticas. Isso supera a limitação anterior de validação apenas sintética; o acesso remoto à UCI permanece não validado. Veja [resultados e divergências do relatório acadêmico](real-data-validation.md).

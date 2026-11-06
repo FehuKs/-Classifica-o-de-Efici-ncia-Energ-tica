@@ -120,7 +120,7 @@ GitHub Actions executa essa suíte sem depender de acesso à UCI durante os test
 - A divisão aleatória única mede desempenho nesse holdout. Não comprova generalização a edifícios independentes ou a outras populações.
 - Orientação e distribuição de vidro mantêm a codificação numérica original; avaliar tratamento categórico é uma mudança metodológica futura.
 - Não há persistência de modelo, API de inferência ou integração com LLM. O fluxo atual é de experimentação e comparação.
-- Resultados históricos do notebook original não são apresentados como resultados desta refatoração. A validação real na nuvem está bloqueada por `403` do proxy para a UCI; não foram reproduzidas suas métricas.
+- Validação com a planilha original fornecida pelo autor: 768 linhas, mediana 18,95, treino/teste 537/231. Acurácias reproduzidas: árvore 96,10%, KNN 97,40%, regressão logística 97,84%. As predições dos três modelos foram idênticas às do código original executado sobre os mesmos dados. CLI e notebook passaram. O download direto pela UCI continua bloqueado pelo proxy; essa limitação não impede a execução via CSV local. Consulte a [validação com dados originais](docs/real-data-validation.md).
 
 Consulte [decisões e validação](docs/decisions.md) para contexto da refatoração.
 
