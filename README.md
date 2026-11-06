@@ -1,8 +1,18 @@
-# Classificação relativa de eficiência energética
+# Classificação de Eficiência Energética — Estudo Acadêmico
 
-Experimento de machine learning sobre o **Energy Efficiency, UCI ID 242**. Compara árvore de decisão, KNN e regressão logística para classificar a carga de aquecimento de edifícios em duas faixas relativas à mediana do dataset.
+Projeto desenvolvido para uma atividade prática da disciplina de **Inteligência Artificial e Computacional**, da **Universidade Feevale**, com foco na construção e avaliação de modelos de classificação supervisionada.
 
-O objetivo é estudar uma tarefa tabular de ponta a ponta: obter dados, explorar atributos, preparar o treino, comparar modelos e gerar evidências. **As classes não representam uma certificação energética oficial**, nem estimam consumo real de um edifício em produção.
+O trabalho utiliza o dataset público **Energy Efficiency, UCI ID 242**, para comparar Árvore de Decisão, KNN e Regressão Logística. A carga de aquecimento foi transformada em duas classes relativas à mediana do conjunto, permitindo realizar o experimento de classificação proposto.
+
+A análise contempla exploração dos dados, pré-processamento, comparação de acurácia, precisão, recall, F1-score e tempo de treinamento, além de matrizes de confusão e visualização da árvore. **As classes não representam uma certificação energética oficial**, nem estimam consumo real de um edifício em produção.
+
+## Origem acadêmica e evolução do projeto
+
+A versão original foi desenvolvida em um notebook como parte da entrega acadêmica, acompanhada de um relatório com a caracterização do dataset, os procedimentos de pré-processamento e a discussão dos resultados.
+
+Posteriormente, o projeto recebeu melhorias de engenharia para facilitar sua manutenção, execução e apresentação em portfólio: modularização, interface de linha de comando, validação de dados, testes automatizados e configuração de integração contínua.
+
+Essas melhorias preservam o protocolo experimental original e são documentadas separadamente dos resultados e conclusões do relatório acadêmico. A configuração de CI foi adicionada ao repositório; sua execução remota ainda não foi verificada. Consulte as [decisões técnicas](docs/decisions.md) e a [validação com os dados originais](docs/real-data-validation.md).
 
 ## Funcionalidades implementadas
 
