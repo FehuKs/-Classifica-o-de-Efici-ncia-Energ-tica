@@ -1,8 +1,18 @@
-# Classificação relativa de eficiência energética
+# Classificação de Eficiência Energética — Estudo Acadêmico
 
-Experimento de machine learning sobre o **Energy Efficiency, UCI ID 242**. Compara árvore de decisão, KNN e regressão logística para classificar a carga de aquecimento de edifícios em duas faixas relativas à mediana do dataset.
+Projeto desenvolvido para uma atividade prática da disciplina de **Inteligência Artificial e Computacional**, da **Universidade Feevale**, com foco na construção e avaliação de modelos de classificação supervisionada.
 
-O objetivo é estudar uma tarefa tabular de ponta a ponta: obter dados, explorar atributos, preparar o treino, comparar modelos e gerar evidências. **As classes não representam uma certificação energética oficial**, nem estimam consumo real de um edifício em produção.
+O trabalho utiliza o dataset público **Energy Efficiency, UCI ID 242**, para comparar Árvore de Decisão, KNN e Regressão Logística. A carga de aquecimento foi transformada em duas classes relativas à mediana do conjunto, permitindo realizar o experimento de classificação proposto.
+
+A análise contempla exploração dos dados, pré-processamento, comparação de acurácia, precisão, recall, F1-score e tempo de treinamento, além de matrizes de confusão e visualização da árvore. **As classes não representam uma certificação energética oficial**, nem estimam consumo real de um edifício em produção.
+
+## Origem acadêmica e evolução do projeto
+
+A versão original foi desenvolvida em um notebook como parte da entrega acadêmica, acompanhada de um relatório com a caracterização do dataset, os procedimentos de pré-processamento e a discussão dos resultados.
+
+Posteriormente, o projeto recebeu melhorias de engenharia para facilitar sua manutenção, execução e apresentação em portfólio: modularização, interface de linha de comando, validação de dados, testes automatizados e configuração de integração contínua.
+
+Essas melhorias preservam o protocolo experimental original e são documentadas separadamente dos resultados e conclusões do relatório acadêmico. A configuração de CI foi adicionada ao repositório; sua execução remota ainda não foi verificada. Consulte as [decisões técnicas](docs/decisions.md) e a [validação com os dados originais](docs/real-data-validation.md).
 
 ## Funcionalidades implementadas
 
@@ -120,7 +130,7 @@ GitHub Actions executa essa suíte sem depender de acesso à UCI durante os test
 - A divisão aleatória única mede desempenho nesse holdout. Não comprova generalização a edifícios independentes ou a outras populações.
 - Orientação e distribuição de vidro mantêm a codificação numérica original; avaliar tratamento categórico é uma mudança metodológica futura.
 - Não há persistência de modelo, API de inferência ou integração com LLM. O fluxo atual é de experimentação e comparação.
-- Resultados históricos do notebook original não são apresentados como resultados desta refatoração. A validação real na nuvem está bloqueada por `403` do proxy para a UCI; não foram reproduzidas suas métricas.
+- Validação com a planilha original fornecida pelo autor: 768 linhas, mediana 18,95, treino/teste 537/231. Acurácias reproduzidas: árvore 96,10%, KNN 97,40%, regressão logística 97,84%. As predições dos três modelos foram idênticas às do código original executado sobre os mesmos dados. CLI e notebook passaram. O download direto pela UCI continua bloqueado pelo proxy; essa limitação não impede a execução via CSV local. Consulte a [validação com dados originais](docs/real-data-validation.md).
 
 Consulte [decisões e validação](docs/decisions.md) para contexto da refatoração.
 

@@ -17,10 +17,10 @@ O estudo dependia de estado compartilhado no notebook, instalação implícita e
 - Notebook completo: 5 células de código executadas com CSV sintético de teste, usando nbclient; o arquivo versionado mantém DATA_CSV=None e não contém resultados fabricados.
 - Instalação com requirements.lock e instalação editável sem dependências/isolamento de build: passaram.
 - `python -m pip check` e `git diff --check`: passaram.
-- Execução real com UCI: bloqueada pelo proxy para archive.ics.uci.edu; CLI retorna código 1 e mensagem de diagnóstico. Nenhuma nova métrica da UCI foi validada.
+- Validação adicional com ENB2012_data.xlsx fornecida pelo autor: CLI e notebook passaram; as predições dos três modelos são idênticas às do código original sobre os mesmos dados. Acurácias: 96,10%, 97,40% e 97,84%. Download remoto da UCI permanece bloqueado.
 
 ## Limites
 
-A equivalência foi verificada com dados sintéticos, não com uma reprodução atual da fonte UCI. A mediana global mantém a definição retrospectiva da tarefa; não representa avaliação prospectiva ou certificação energética. Tempos dos pipelines incluem ajuste do scaler. A execução remota do GitHub Actions ainda não foi observada.
+A equivalência foi verificada com dados sintéticos e a planilha original enviada pelo autor, convertida para CSV. O download atual da fonte UCI não pôde ser validado. A mediana global mantém a definição retrospectiva da tarefa; não representa avaliação prospectiva ou certificação energética. Tempos dos pipelines incluem ajuste do scaler. A execução remota do GitHub Actions ainda não foi observada.
 
 Sem LLM, serviços pagos, API de inferência ou mudanças metodológicas adicionais.

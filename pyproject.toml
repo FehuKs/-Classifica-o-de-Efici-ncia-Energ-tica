@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "energy-efficiency-study"
 version = "0.1.0"
-description = "Experimento reproduzível de classificação da carga de aquecimento"
+description = "Estudo acadêmico de classificação para a disciplina de Inteligência Artificial e Computacional — Universidade Feevale"
 requires-python = ">=3.12"
 dependencies = [
   "numpy==2.5.4",
